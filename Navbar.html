@@ -161,22 +161,93 @@
 
 
         /* about */
-        .about {
+        /* .about {
             background-color: wheat;
             height: 500px;
             display: flex;
             /* justify-content: center; */
-            align-items: center;
+        /* align-items: center;
             font-weight: bold;
             font-size: 22px;
             width: 1200px;
             margin-left: 90px;
             box-shadow: 5px 5px 10px gray;
             margin-top: 30px;
+        } */
+        /* About Section Styling */
+        .about-container {
+            background-color: #f5deb3;
+            /* Soft wheat color */
+            padding: 50px;
+            width: 80%;
+            margin: 50px auto;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
         }
 
+        /* Hover effect */
+        .about-container:hover {
+            transform: scale(1.02);
+        }
+
+        /* Heading */
+        .heading {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* About Content Layout */
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Image Styling */
+        .about-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            box-shadow: 5px 5px 10px gray;
+            transition: transform 0.4s ease-in-out, box-shadow 0.3s;
+        }
+
+        .about-img:hover {
+            transform: scale(1.1);
+            box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Text Styling */
+        .about-text {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #444;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                text-align: center;
+            }
+        }
+
+
         /* skills */
-        .skill {
+        /* .skill {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -193,10 +264,9 @@
         /* .text {
             display: flex;
             /* align-items: center;  */
-            /* justify-content: center;
-        } */ */
-
-        .js {
+        /* justify-content: center;
+        } */
+        */ .js {
             border-radius: 150px;
         }
 
@@ -223,6 +293,58 @@
             }
         }
 
+        */
+
+        /* Skills Section */
+        .skill {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 500px;
+            gap: 100px;
+            margin: 30px auto;
+            background-color: blanchedalmond;
+            box-shadow: 5px 5px 10px gray;
+            max-width: 1200px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Text Section (Uncomment if needed) */
+        /* .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+        .js {
+            border-radius: 150px;
+        }
+
+        .github {
+            height: 200px;
+        }
+
+        /* Skill Icons Animation */
+        .html,
+        .js,
+        .css,
+        .mongodb,
+        .github {
+            animation: rotateImage 2s infinite linear;
+            height: 140px;
+        }
+
+        @keyframes rotateImage {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+
         /* about image */
         .aboutimg {
             height: 400px;
@@ -233,15 +355,15 @@
         }
 
         /* projectimg */
-        .projects {
+        /* .projects {
             background-color: beige;
             /* height: 600px; */
-            width: 1200px;
-            margin-left: 90px;
-            box-shadow: 5px 5px 10px gray;
-            height: 500px;
+        /* width: 1200px;
+        margin-left: 90px;
+        box-shadow: 5px 5px 10px gray;
+        height: 500px;
 
-        }
+        } */
 
         .heading {
             display: flex;
@@ -255,34 +377,195 @@
             background-color: beige;
         }
 
-        .project-text {
+        /* .project-text {
             display: flex;
-            justify-content: center;
-            /* flex-wrap: wrap; */
-            margin-left: 700px;
-            margin-right: 100px;
+            justify-content: center; */
+        /* flex-wrap: wrap; */
+        /* margin-left: 700px; */
+        /* margin-right: 100px;
             margin-top: -250px;
             font-weight: bold;
             font-size: large;
+        } */
+        .projects {
+            background-color: beige;
+            width: 80%;
+            margin: 20px auto;
+            box-shadow: 5px 5px 10px gray;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
         }
-        .stat{
+
+        .heading {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .projectimg {
+            height: 300px;
+            width: auto;
+            border-radius: 10px;
+        }
+
+        .project-text {
+            max-width: 500px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+
+        /* .stat {
             background-color: bisque;
             width: 1200px;
             margin-left: 90px;
             box-shadow: 5px 5px 10px gray;
             height: 500px;
         }
-        .stat-img{
+
+        .stat-img {
             height: 200px;
-            margin-left: 2
-            00px;
+            margin-left: 2 00px;
+        } */
+        .stat {
+            background-color: bisque;
+            width: 80%;
+            margin: 20px auto;
+            box-shadow: 5px 5px 10px gray;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
         }
-        h1{
+
+        .stat-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .stat-img {
+            height: 200px;
+            width: auto;
+            border-radius: 10px;
+        }
+
+
+        h1 {
             display: flex;
             /* justify-content: center; */
 
         }
-       
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            background-color: #f9f9f9;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 5px 5px 10px gray;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .contact-left,
+        .contact-right {
+            width: 45%;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .profile-links a {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #007BFF;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .profile-links a:hover {
+            color: #0056b3;
+        }
+
+        .profile-links i {
+            margin-right: 8px;
+        }
+
+        /* Menu Icon (Hidden by Default) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #444;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav-links li {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
     </style>
 </head>
 
@@ -317,19 +600,24 @@
     </div>
 
 
-    <!-- about -->
-    <section id="about"></section>
-    <div class="about">
-        <h1 class="heading">About</h1>
-        <img class="aboutimg" src="https://i.postimg.cc/Cxy79m0R/crop-my.jpg" alt="">
-        <div class="about">Adaptable Web Engineer with expertise in HTML,<br>
-            CSS, JavaScript, and MongoDB, driven to deliver responsive,<br>
-            user-centric applications. Combines innovation with problem <br>
-            -solving to harness Generative AI and emerging technologies <br>
-            rapidly. Proficient in Git, RESTful APIs, and testing frameworks <br>
-            like Jest, ensuring seamless team collaboration.
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <h1 class="heading">About Me</h1>
+            <div class="about-content">
+                <img class="about-img" src="https://i.postimg.cc/Cxy79m0R/crop-my.jpg" alt="Anugya Singh">
+                <div class="about-text">
+                    <p>Adaptable Web Engineer with expertise in <b>HTML, CSS, JavaScript, and MongoDB</b>, driven to
+                        deliver responsive, user-centric applications.</p>
+                    <p>Combines innovation with problem-solving to harness <b>Generative AI</b> and emerging
+                        technologies rapidly.</p>
+                    <p>Proficient in <b>Git, RESTful APIs</b>, and testing frameworks like <b>Jest</b>, ensuring
+                        seamless team collaboration.</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
 
 
 
@@ -354,7 +642,7 @@
     </div>
 
 
-    <!-- projects -->
+    <!-- projects
     <section id="project"></section>
 
     <div class="projects">
@@ -369,22 +657,64 @@
             ✔️ Login page ✔️ Interactive logo ✔️ Men, women, bags, and footwear, and many more things ✔️ User-friendly
             shopping interface ✔️ Add-to-cart functionality
         </div>
-    </div>
+    </div> -->
+    <!-- Projects Section -->
+    <section id="project">
+        <div class="projects">
+            <h1 class="heading">Projects</h1>
+            <div class="project-container">
+                <img class="projectimg" src="https://i.postimg.cc/yx4h2Nqw/project-screnshot.png"
+                    alt="Project Screenshot">
+                <div class="project-text">
+                    <p>
+                        I have tried to create an e-commerce website using the knowledge I acquired from Masai. My
+                        website is called <strong>Tunic</strong>.
+                        I have also sought assistance from a chat GPT, <strong>FashionHub</strong>. It's a stylish and
+                        responsive
+                        fashion e-commerce website designed to showcase the latest trends in clothing, footwear, and
+                        accessories.
+                        <br><br>
+                        The website offers users an interactive and seamless shopping experience, similar to popular
+                        platforms like <strong>Myntra</strong>.
+                    </p>
+                    <ul>
+                        <li>✔️ Login page</li>
+                        <li>✔️ Interactive logo</li>
+                        <li>✔️ Men, women, bags, and footwear categories</li>
+                        <li>✔️ User-friendly shopping interface</li>
+                        <li>✔️ Add-to-cart functionality</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- statistics -->
+
+    <!-- statistics
     <section id="statitics"></section>
     <div class="stat">
         <h1 class="heading">Git Stats</h1>
         <img class="stat-img" src="https://i.postimg.cc/Hnt5mP5T/Screenshot-2025-02-13-140157.png" alt="">
 
-    </div>
+    </div> -->
+    <!-- Git Statistics Section -->
+    <section id="statistics">
+        <div class="stat">
+            <h1 class="heading">Git Stats</h1>
+            <div class="stat-container">
+                <img class="stat-img" src="https://i.postimg.cc/Hnt5mP5T/Screenshot-2025-02-13-140157.png"
+                    alt="GitHub Stats">
+            </div>
+        </div>
+    </section>
 
 
-    <!-- contact -->
+
+    <!-- contact
     <section id="contact"></section>
     <div class="container">
         <!-- Left Side: Contact Form -->
-        <div class="contact-left">
+    <!-- <div class="contact-left">
             <h2>Contact Me</h2>
             <form action="mailto:your@email.com" method="POST" enctype="text/plain">
                 <input type="text" name="name" placeholder="Your Name" required>
@@ -394,8 +724,8 @@
             </form>
         </div>
 
-        <!-- Right Side: Profile Links -->
-        <div class="contact-right">
+        Right Side: Profile Links -->
+    <!-- <div class="contact-right">
             <h2>Connect with Me</h2>
             <div class="profile-links">
                 <a href="https://github.com/yourusername" target="_blank">GitHub</a>
@@ -404,7 +734,37 @@
                 <a href="https://yourwebsite.com" target="_blank">Portfolio</a>
             </div>
         </div>
-    </div>
+    </div> -->
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <!-- Left Side: Contact Form -->
+            <div class="contact-left">
+                <h2>Contact Me</h2>
+                <form action="mailto:your@email.com" method="POST" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Right Side: Profile Links -->
+            <div class="contact-right">
+                <h2>Connect with Me</h2>
+                <div class="profile-links">
+                    <a href="https://github.com/Anugyasingh123" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://linkedin.com/in/anugya-singh-3a854133b" target="_blank"><i class="fab fa-linkedin"></i>
+                        LinkedIn</a>
+                    <a href="mailto:anugya.queen06@gmail.com">
+                            <i class="fas fa-envelope"></i> Email Me
+                        </a>
+                        <a>7325929559</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 </body>
@@ -413,6 +773,12 @@
         let navLinks = document.querySelector(".nav-links");
         navLinks.classList.toggle("active");
     }
+
+    // Smooth Scroll
+    document.querySelector(".cta-button").addEventListener("click", function () {
+        document.querySelector("#home").scrollIntoView({ behavior: "smooth" });
+    });
+
 </script>
 
 </html>
